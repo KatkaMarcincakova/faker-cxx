@@ -732,3 +732,50 @@ TEST_F(WordTestLocale, shouldReturnFrenchSampleifAskedforFrenchWord)
 
 INSTANTIATE_TEST_SUITE_P(testWordByLocale, WordTestLocale, ValuesIn(locales),
                          [](const TestParamInfo<Locale>& paramInfo) { return toString(paramInfo.param); });
+
+
+TEST(SortedSizeRandomElementTest, WhenLengthIsNullopt)
+{
+    std::vector<std::string> words = {"hi", "hello", "hey", "greetings"};
+
+    // Simulate the case when no length is passed (i.e., nullopt)
+    auto result = sortedSizeRandomElement(std::nullopt, words);
+
+    // Assert that the result is one of the elements in the range
+    EXPECT_TRUE(std::find(words.begin(), words.end(), result) != words.end());
+}
+
+TEST(SortedSizeRandomElementTest, WhenLengthIsZero)
+{
+	std::vector<std::string> words = {"hi", "hello", "hey", "greetings"};
+
+	// Simulate the case when the length is zero
+	auto result = sortedSizeRandomElement(0, words);
+
+	// Assert that the result is one of the elements in the range
+	EXPECT_TRUE(std::find(words.begin(), words.end(), result) != words.end());
+}
+
+TEST(SortedSizeRandomElementTest, WhenLengthIsProvidedButNoMatch)
+{
+    std::vector<std::string> words = {"hi", "hello", "hey", "greetings"};
+
+    // Test for a length that doesn't match any word in the range
+    unsigned length = 10;
+    auto result = sortedSizeRandomElement(length, words);
+
+    // Assert that the result is one of the elements in the range
+    EXPECT_TRUE(std::find(words.begin(), words.end(), result) != words.end());
+}
+
+TEST(SortedSizeRandomElementTest, WithLargerRange)
+{
+    std::vector<std::string> words = {"hi", "hello", "hey", "greetings", "bonjour", "salut"};
+
+    // Test with a larger range and a random length
+    unsigned length = 5; // "hello" or "salut"
+    auto result = sortedSizeRandomElement(length, words);
+
+    // Assert that the result has the correct length (5 in this case)
+    EXPECT_EQ(result.size(), length);
+}
