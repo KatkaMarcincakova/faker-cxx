@@ -3,11 +3,14 @@
 #include <string_view>
 
 #include "faker-cxx/export.h"
+#include "faker-cxx/types/locale.h"
 
 namespace faker::animal
 {
 /**
  * @brief Returns a random species of bear.
+ *
+ * @param locale The locale. Defaults to `Locale::en_US`.
  *
  * @returns Species of bear.
  *
@@ -15,10 +18,12 @@ namespace faker::animal
  * faker::animal::bear() // "Polar bear"
  * @endcode
  */
-FAKER_CXX_EXPORT std::string_view bear();
+FAKER_CXX_EXPORT std::string_view bear(Locale locale = Locale::en_US);
 
 /**
  * @brief Returns a random species of bird.
+ *
+ * @param locale The locale. Defaults to `Locale::en_US`.
  *
  * @returns Species of bird.
  *
@@ -26,10 +31,12 @@ FAKER_CXX_EXPORT std::string_view bear();
  * faker::animal::bird() // "Black-bellied Whistling-Duck"
  * @endcode
  */
-FAKER_CXX_EXPORT std::string_view bird();
+FAKER_CXX_EXPORT std::string_view bird(Locale locale = Locale::en_US);
 
 /**
  * @brief Returns a random species of cat.
+ *
+ * @param locale The locale. Defaults to `Locale::en_US`.
  *
  * @returns Species of cat.
  *
@@ -37,10 +44,12 @@ FAKER_CXX_EXPORT std::string_view bird();
  * faker::animal::cat() // "Chartreux"
  * @endcode
  */
-FAKER_CXX_EXPORT std::string_view cat();
+FAKER_CXX_EXPORT std::string_view cat(Locale locale = Locale::en_US);
 
 /**
  * @brief Returns a random species of cetacean.
+ *
+ * @param locale The locale. Defaults to `Locale::en_US`.
  *
  * @returns Species of cetacean.
  *
@@ -48,10 +57,12 @@ FAKER_CXX_EXPORT std::string_view cat();
  * faker::animal::cetacean() // "Blue Whale"
  * @endcode
  */
-FAKER_CXX_EXPORT std::string_view cetacean();
+FAKER_CXX_EXPORT std::string_view cetacean(Locale locale = Locale::en_US);
 
 /**
  * @brief Returns a random species of cow.
+ *
+ * @param locale The locale. Defaults to `Locale::en_US`.
  *
  * @returns Species of cow.
  *
@@ -59,10 +70,12 @@ FAKER_CXX_EXPORT std::string_view cetacean();
  * faker::animal::cow() // "American Angus"
  * @endcode
  */
-FAKER_CXX_EXPORT std::string_view cow();
+FAKER_CXX_EXPORT std::string_view cow(Locale locale = Locale::en_US);
 
 /**
  * @brief Returns a random species of crocodilia.
+ *
+ * @param locale The locale. Defaults to `Locale::en_US`.
  *
  * @returns Species of crocodilia.
  *
@@ -70,10 +83,12 @@ FAKER_CXX_EXPORT std::string_view cow();
  * faker::animal::crocodile() // "Dwarf Crocodile"
  * @endcode
  */
-FAKER_CXX_EXPORT std::string_view crocodile();
+FAKER_CXX_EXPORT std::string_view crocodile(Locale locale = Locale::en_US);
 
 /**
  * @brief Returns a random species of dog.
+ *
+ * @param locale The locale. Defaults to `Locale::en_US`.
  *
  * @returns Species of dog.
  *
@@ -81,10 +96,12 @@ FAKER_CXX_EXPORT std::string_view crocodile();
  * faker::animal::dog() // "Shiba Inu"
  * @endcode
  */
-FAKER_CXX_EXPORT std::string_view dog();
+FAKER_CXX_EXPORT std::string_view dog(Locale locale = Locale::en_US);
 
 /**
  * @brief Returns a random species of fish.
+ *
+ * @param locale The locale. Defaults to `Locale::en_US`.
  *
  * @returns Species of fish.
  *
@@ -92,10 +109,12 @@ FAKER_CXX_EXPORT std::string_view dog();
  * faker::animal::fish() // "Silver carp"
  * @endcode
  */
-FAKER_CXX_EXPORT std::string_view fish();
+FAKER_CXX_EXPORT std::string_view fish(Locale locale = Locale::en_US);
 
 /**
  * @brief Returns a random species of horse.
+ *
+ * @param locale The locale. Defaults to `Locale::en_US`.
  *
  * @returns Species of horse.
  *
@@ -103,10 +122,12 @@ FAKER_CXX_EXPORT std::string_view fish();
  * faker::animal::horse() // "Fjord Horse"
  * @endcode
  */
-FAKER_CXX_EXPORT std::string_view horse();
+FAKER_CXX_EXPORT std::string_view horse(Locale locale = Locale::en_US);
 
 /**
  * @brief Returns a random species of insect.
+ *
+ * @param locale The locale. Defaults to `Locale::en_US`.
  *
  * @returns Species of insect.
  *
@@ -114,10 +135,12 @@ FAKER_CXX_EXPORT std::string_view horse();
  * faker::animal::insect() // "Bee"
  * @endcode
  */
-FAKER_CXX_EXPORT std::string_view insect();
+FAKER_CXX_EXPORT std::string_view insect(Locale locale = Locale::en_US);
 
 /**
  * @brief Returns a random species of lion.
+ *
+ * @param locale The locale. Defaults to `Locale::en_US`.
  *
  * @returns Species of lion.
  *
@@ -125,10 +148,12 @@ FAKER_CXX_EXPORT std::string_view insect();
  * faker::animal::lion() // "West African Lion"
  * @endcode
  */
-FAKER_CXX_EXPORT std::string_view lion();
+FAKER_CXX_EXPORT std::string_view lion(Locale locale = Locale::en_US);
 
 /**
  * @brief Returns a random species of rabbit.
+ *
+ * @param locale The locale. Defaults to `Locale::en_US`.
  *
  * @returns Species of rabbit.
  *
@@ -136,10 +161,12 @@ FAKER_CXX_EXPORT std::string_view lion();
  * faker::animal::rabbit() // "Californian"
  * @endcode
  */
-FAKER_CXX_EXPORT std::string_view rabbit();
+FAKER_CXX_EXPORT std::string_view rabbit(Locale locale = Locale::en_US);
 
 /**
  * @brief Returns a random species of rodent.
+ *
+ * @param locale The locale. Defaults to `Locale::en_US`.
  *
  * @returns Species of rodent.
  *
@@ -147,10 +174,12 @@ FAKER_CXX_EXPORT std::string_view rabbit();
  * faker::animal::rodent() // "Chinchilla"
  * @endcode
  */
-FAKER_CXX_EXPORT std::string_view rodent();
+FAKER_CXX_EXPORT std::string_view rodent(Locale locale = Locale::en_US);
 
 /**
  * @brief Returns a random species of snake.
+ *
+ * @param locale The locale. Defaults to `Locale::en_US`.
  *
  * @returns Species of snake.
  *
@@ -158,10 +187,12 @@ FAKER_CXX_EXPORT std::string_view rodent();
  * faker::animal::snake() // "Boa constrictor"
  * @endcode
  */
-FAKER_CXX_EXPORT std::string_view snake();
+FAKER_CXX_EXPORT std::string_view snake(Locale locale = Locale::en_US);
 
 /**
  * @brief Returns a random type of animal.
+ *
+ * @param locale The locale. Defaults to `Locale::en_US`.
  *
  * @returns Type of animal.
  *
@@ -169,5 +200,5 @@ FAKER_CXX_EXPORT std::string_view snake();
  * faker::animal::type() // "dog"
  * @endcode
  */
-FAKER_CXX_EXPORT std::string_view type();
+FAKER_CXX_EXPORT std::string_view type(Locale locale = Locale::en_US);
 }
